@@ -130,7 +130,7 @@ d3.json("flare-imports.json", function(nodes) {
       .attr("r", 4)
       .on("mouseover", nodeMouseover)
       .on("mouseout", mouseout);
-
+  
   // Highlight the link and connected nodes on mouseover.
   function linkMouseover(d) {
     svg.selectAll(".link").classed("active", function(p) { return p === d; });
