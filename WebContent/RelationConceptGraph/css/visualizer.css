@@ -1,0 +1,9 @@
+.link {
+  stroke: #999;
+  stroke-opacity: .6;
+}
+
+.node text circle {
+  pointer-events: none;
+  font: 10px sans-serif;
+}
