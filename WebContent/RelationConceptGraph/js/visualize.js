@@ -139,7 +139,7 @@
             .attr("text-anchor", function(d) { 
                 return !d.right ? 'start' : 'start' ;
             })
-            .style("font-size","12px")
+            .style("font-size",control.options.labelFontSize + "px")
             .text(function(d) {
                 return d.shortName ? d.shortName : d.name;
             });
@@ -155,7 +155,7 @@
             .attr("class", "text")
             .attr("text-anchor", function(d) { 
                 return !d.right ? 'start' : 'start' ;})
-            .style("font-size","12px")
+            .style("font-size",control.options.labelFontSize + "px")
             .text(function(d) {
                 return d.shortName ? d.shortName : d.name;
             })
