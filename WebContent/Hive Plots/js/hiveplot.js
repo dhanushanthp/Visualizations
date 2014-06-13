@@ -121,6 +121,7 @@ d3.json("flare-imports.json", function(nodes) {
       .data(nodes)
     .enter().append("g")
       .attr("class", "node")
+      .text("asdf")
       .style("fill", function(d) { return color(d.packageName); })
     .selectAll("circle")
       .data(function(d) { return d.connectors; })
