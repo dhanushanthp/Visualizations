@@ -5,19 +5,19 @@
   var get_info  = function(data_set, format) {
 
     var degree  = Math.PI / 180,
-        x_max   = 900,    x_off   = x_max * 0.25,
+        x_max   = 900,    x_off   = x_max * 0.45,
         y_max   = 900,    y_off   = y_max * 0.4;
 
     if (format === 'conv') {  // "conventional"
       var a_off   =   20,
           a_so    =    0,     a_st    = (120 - a_off),
           a_to    = -120,     a_ts    = (120 + a_off),
-          i_rad   =   25,     o_rad   = 650;
+          i_rad   =   25,     o_rad   = 400;
 
     } else {                  // "rectangular"
       var a_so    =  -45,     a_st    = 45,
           a_to    = -135,     a_ts    = 135,
-          i_rad   =   25,     o_rad   = 650;
+          i_rad   =   25,     o_rad   = 400;
     }
 
     var info  = {
@@ -40,8 +40,8 @@
   };
 
 
-  var data_sets     = { '#demo_1':   'flare-imports.json',
-                        '#demo_2':   'flare-imports.json' };
+  var data_sets     = { '#demo_1':   'flare-imports_edit.json',
+                        '#demo_2':   'flare-imports_edit.json' };
 
   var info_sets     = {};
 

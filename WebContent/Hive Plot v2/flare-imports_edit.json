@@ -1,0 +1,54 @@
+[
+		{
+			"name" : "pearson.firstlevel.m1",
+			"imports" : [ "pearson.secondlevel.s1", "pearson.secondlevel.s2",
+					"pearson.secondlevel.s3" ]
+		},
+		{
+			"name" : "pearson.firstlevel.m2",
+			"imports" : [ "pearson.secondlevel.s1", "pearson.secondlevel.s2",
+					"pearson.secondlevel.s3" ]
+		},
+		{
+			"name" : "pearson.firstlevel.m3",
+			"imports" : [ "pearson.secondlevel.s1", "pearson.secondlevel.s2",
+					"pearson.secondlevel.s3" ]
+		},
+		{
+			"name" : "pearson.firstlevel.m4",
+			"imports" : []
+		},
+		{
+			"name" : "pearson.heading.H1",
+			"imports" : [ "pearson.firstlevel.m1", "pearson.firstlevel.m2",
+					"pearson.firstlevel.m3", "pearson.firstlevel.m4" ]
+		},
+
+		{
+			"name" : "pearson.heading.H2",
+			"imports" : [ "pearson.firstlevel.m11", "pearson.firstlevel.m12",
+					"pearson.firstlevel.m13", "pearson.firstlevel.m14" ]
+		},
+		{
+			"name" : "pearson.firstlevel.m11",
+			"imports" : [ "pearson.secondlevel.s1", "pearson.secondlevel.s2",
+					"pearson.secondlevel.s3" ]
+		}, {
+			"name" : "pearson.firstlevel.m12",
+			"imports" : []
+		}, {
+			"name" : "pearson.firstlevel.m13",
+			"imports" : []
+		}, {
+			"name" : "pearson.firstlevel.m14",
+			"imports" : []
+		}, {
+			"name" : "pearson.secondlevel.s1",
+			"imports" : []
+		}, {
+			"name" : "pearson.secondlevel.s2",
+			"imports" : []
+		}, {
+			"name" : "pearson.secondlevel.s3",
+			"imports" : []
+		} ]
