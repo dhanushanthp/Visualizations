@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>d3.js from Excel - ramblings.mcpher.com</title>
+<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+  Remove this if you use the .htaccess -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<link rel="stylesheet" type="text/css" href="css/directedgraph.css"></link>
+</head>
+<body>
+	<div>
+
+	<div id= chart></div>
+		<script type="text/javascript">
+		var sample2={"nodes":[
+		          			{"name":"0","group":0,"label":"Doc","count":1000,"shortName":"D1"},
+		          			{"name":"1","group":1,"label":"Para","count":500,"shortName":"Clash of Cultures: Interpreting Murder in Early Maryland"},
+		          			{"name":"2","group":1,"label":"Para","count":500,"shortName":"New World Encounters"},
+		          			{"name":"3","group":2,"label":"1","count":100,"shortName":"new world conquest"},
+		          			{"name":"4","group":2,"label":"1","count":100,"shortName":"great annoyance"},
+		          			{"name":"5","group":2,"label":"1","count":100,"shortName":"benefit"},
+		          			{"name":"6","group":2,"label":"1","count":100,"shortName":"governor"},
+		          			{"name":"7","group":2,"label":"1","count":100,"shortName":"encounter"},
+		          			{"name":"8","group":2,"label":"1","count":100,"shortName":"roanoke"},
+		          			{"name":"9","group":2,"label":"1","count":100,"shortName":"messenger"},
+		          			{"name":"10","group":2,"label":"1","count":100,"shortName":"people"},
+		          			{"name":"11","group":2,"label":"1","count":100,"shortName":"event"},
+		          			{"name":"12","group":2,"label":"1","count":100,"shortName":"new world"},
+		          			{"name":"13","group":2,"label":"1","count":100,"shortName":"value"},
+		          			{"name":"14","group":2,"label":"1","count":100,"shortName":"maryland"},
+		          			{"name":"15","group":2,"label":"1","count":100,"shortName":"perspective"},
+		          			{"name":"16","group":2,"label":"1","count":100,"shortName":"opinion"},
+		          			{"name":"17","group":2,"label":"1","count":100,"shortName":"arm"},
+		          			{"name":"18","group":2,"label":"1","count":100,"shortName":"demand"},
+		          			{"name":"19","group":2,"label":"1","count":100,"shortName":"custom"},
+		          			{"name":"20","group":2,"label":"1","count":100,"shortName":"public humiliation"},
+		          			{"name":"21","group":2,"label":"1","count":100,"shortName":"cultural superiority"},
+		          			{"name":"22","group":2,"label":"1","count":100,"shortName":"murder"},
+		          			{"name":"23","group":2,"label":"1","count":100,"shortName":"alleged superiority"},
+		          			{"name":"24","group":2,"label":"1","count":100,"shortName":"laugh"},
+		          			{"name":"25","group":2,"label":"1","count":100,"shortName":"youth"},
+		          			{"name":"26","group":2,"label":"1","count":100,"shortName":"table"},
+		          			{"name":"27","group":2,"label":"1","count":100,"shortName":"wicomess"},
+		          			{"name":"28","group":2,"label":"1","count":100,"shortName":"country"},
+		          			{"name":"29","group":2,"label":"1","count":100,"shortName":"record"},
+		          			{"name":"30","group":2,"label":"1","count":100,"shortName":"captain william claiborne"},
+		          			{"name":"31","group":2,"label":"1","count":100,"shortName":"struggle"},
+		          			{"name":"32","group":2,"label":"1","count":100,"shortName":"crime"},
+		          			{"name":"33","group":2,"label":"1","count":100,"shortName":"satisfaction"},
+		          			{"name":"34","group":2,"label":"1","count":100,"shortName":"claiborne"},
+		          			{"name":"35","group":2,"label":"1","count":100,"shortName":"proprietor entertaining susquehannock"},
+		          			{"name":"36","group":2,"label":"1","count":100,"shortName":"sort"},
+		          			{"name":"37","group":2,"label":"1","count":100,"shortName":"accident"},
+		          			{"name":"38","group":2,"label":"1","count":100,"shortName":"harm"},
+		          			{"name":"39","group":2,"label":"1","count":100,"shortName":"settler"},
+		          			{"name":"40","group":2,"label":"1","count":100,"shortName":"issue"},
+		          			{"name":"41","group":2,"label":"1","count":100,"shortName":"contest"},
+		          			{"name":"42","group":2,"label":"1","count":100,"shortName":"self"},
+		          			{"name":"43","group":2,"label":"1","count":100,"shortName":"stranger"},
+		          			{"name":"44","group":2,"label":"1","count":100,"shortName":"business"},
+		          			{"name":"45","group":2,"label":"1","count":100,"shortName":"wicomess spokesman"},
+		          			{"name":"46","group":2,"label":"1","count":100,"shortName":"prisoner"},
+		          			{"name":"47","group":2,"label":"1","count":100,"shortName":"basic native american legal procedure"},
+		          			{"name":"48","group":2,"label":"1","count":100,"shortName":"fit"},
+		          			{"name":"49","group":2,"label":"1","count":100,"shortName":"england"},
+		          			{"name":"50","group":2,"label":"1","count":100,"shortName":"life"},
+		          			{"name":"51","group":2,"label":"1","count":100,"shortName":"leader"},
+		          			{"name":"52","group":2,"label":"1","count":100,"shortName":"outrage"},
+		          			{"name":"53","group":2,"label":"1","count":100,"shortName":"money"},
+		          			{"name":"54","group":2,"label":"1","count":100,"shortName":"length"},
+		          			{"name":"55","group":2,"label":"1","count":100,"shortName":"conversation"},
+		          			{"name":"56","group":2,"label":"1","count":100,"shortName":"colonizer"},
+		          			{"name":"57","group":2,"label":"1","count":100,"shortName":"situation"},
+		          			{"name":"58","group":2,"label":"1","count":100,"shortName":"institution"},
+		          			{"name":"59","group":2,"label":"1","count":100,"shortName":"enemy"},
+		          			{"name":"60","group":2,"label":"1","count":100,"shortName":"strong preference"},
+		          			{"name":"61","group":2,"label":"1","count":100,"shortName":"susquehannock"},
+		          			{"name":"62","group":2,"label":"1","count":100,"shortName":"matter"},
+		          			{"name":"63","group":2,"label":"1","count":100,"shortName":"male"},
+		          			{"name":"64","group":2,"label":"1","count":100,"shortName":"north america"},
+		          			{"name":"65","group":2,"label":"1","count":100,"shortName":"trading post"},
+		          			{"name":"66","group":2,"label":"1","count":100,"shortName":"civilization"},
+		          			{"name":"67","group":2,"label":"1","count":100,"shortName":"manner"}], 
+		          			
+		          			"links":[{"source":1,"target":0,"count":1},
+		          			{"source":2,"target":0,"count":1},
+		          			{"source":3,"target":1,"count":1},
+		          			{"source":4,"target":1,"count":1},
+		          			{"source":5,"target":1,"count":1},
+		          			{"source":6,"target":1,"count":1},
+		          			{"source":7,"target":2,"count":1},
+		          			{"source":8,"target":1,"count":1},
+		          			{"source":9,"target":1,"count":1},
+		          			{"source":10,"target":1,"count":1},
+		          			{"source":11,"target":1,"count":1},
+		          			{"source":12,"target":2,"count":1},
+		          			{"source":13,"target":1,"count":1},
+		          			{"source":14,"target":1,"count":1},
+		          			{"source":15,"target":1,"count":1},{"source":16,"target":1,"count":1},{"source":17,"target":1,"count":1},{"source":18,"target":1,"count":1},{"source":19,"target":1,"count":1},{"source":20,"target":1,"count":1},{"source":21,"target":1,"count":1},{"source":22,"target":1,"count":1},{"source":23,"target":1,"count":1},{"source":24,"target":1,"count":1},{"source":25,"target":1,"count":1},{"source":26,"target":1,"count":1},{"source":27,"target":1,"count":1},{"source":28,"target":1,"count":1},{"source":29,"target":1,"count":1},{"source":30,"target":1,"count":1},{"source":31,"target":1,"count":1},{"source":32,"target":1,"count":1},{"source":33,"target":1,"count":1},{"source":34,"target":1,"count":1},{"source":35,"target":1,"count":1},{"source":36,"target":1,"count":1},{"source":37,"target":1,"count":1},{"source":38,"target":1,"count":1},{"source":39,"target":1,"count":1},{"source":40,"target":1,"count":1},{"source":41,"target":1,"count":1},{"source":42,"target":1,"count":1},{"source":43,"target":1,"count":1},{"source":44,"target":1,"count":1},{"source":45,"target":1,"count":1},{"source":46,"target":1,"count":1},{"source":47,"target":1,"count":1},{"source":48,"target":1,"count":1},{"source":49,"target":1,"count":1},{"source":50,"target":1,"count":1},{"source":51,"target":1,"count":1},{"source":52,"target":1,"count":1},{"source":53,"target":1,"count":1},{"source":54,"target":1,"count":1},{"source":55,"target":1,"count":1},{"source":56,"target":1,"count":1},{"source":57,"target":1,"count":1},{"source":58,"target":1,"count":1},{"source":59,"target":1,"count":1},{"source":60,"target":1,"count":1},{"source":61,"target":1,"count":1},{"source":62,"target":1,"count":1},{"source":63,"target":1,"count":1},{"source":64,"target":1,"count":1},{"source":65,"target":1,"count":1},{"source":66,"target":1,"count":1},{"source":67,"target":1,"count":1}]}
+
+		</script>
+	</div>
+	<script type="text/javascript" src="js/source/d3.v3.min.js"></script>
+	<script type="text/javascript" src="js/source/jsapi"></script>
+	<script type="text/javascript" src="js/source/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="js/directedgraph.js"></script>
+	<script type="text/javascript">generateGraph(sample2);</script>
+</body>
+</html>

@@ -5,6 +5,16 @@
 					"pearson.secondlevel.s3" ]
 		},
 		{
+			"name" : "pearson.firstlevel.m1",
+			"imports" : [ "pearson.secondlevel.s1", "pearson.secondlevel.s2",
+					"pearson.secondlevel.s3" ]
+		},
+		{
+			"name" : "pearson.firstlevel.m1",
+			"imports" : [ "pearson.secondlevel.s1", "pearson.secondlevel.s2",
+					"pearson.secondlevel.s3" ]
+		},
+		{
 			"name" : "pearson.firstlevel.m2",
 			"imports" : [ "pearson.secondlevel.s1", "pearson.secondlevel.s2",
 					"pearson.secondlevel.s3" ]
