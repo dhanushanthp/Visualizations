@@ -303,13 +303,10 @@
       // Iteration through nodes
       _helpers.nodeListEach(_xml.els.nodes, function(n) {
 
-//    	console.log(n.getElementsByTagName('attvalue')[1].getAttribute('value'));
-    	
         // Basic properties
         var properties = {
           id: n.getAttribute('id'),
-//          label: n.getAttribute('label') || ''
-          label: n.getElementsByTagName('attvalue')[0].getAttribute('value') || ''
+          label: n.getAttribute('label') || ''
         };
 
         // Retrieving data from nodes if any
