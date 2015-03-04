@@ -302,14 +302,22 @@
 
       // Iteration through nodes
       _helpers.nodeListEach(_xml.els.nodes, function(n) {
-
+    	  //TODO dhanu
 //    	console.log(n.getElementsByTagName('attvalue')[1].getAttribute('value'));
-    	
+    	var x = n.getElementsByTagName('attvalue');
+    	var tmp;
+    	for(var i=0;i<x.length;i++){
+    		if(x[i].getAttribute('for') == 'i_con_title' || x[i].getAttribute('for') == 'i_phrase_name'){
+    			tmp = x[i].getAttribute('value');
+    		}
+    	}
+    	console.log('print')
+    	console.log(tmp);
         // Basic properties
         var properties = {
           id: n.getAttribute('id'),
 //          label: n.getAttribute('label') || ''
-          label: n.getElementsByTagName('attvalue')[0].getAttribute('value') || ''
+          label: tmp || ''
         };
 
         // Retrieving data from nodes if any

@@ -206,7 +206,7 @@ function updatePane (graph, filter) {
   // read nodes
   graph.nodes().forEach(function(n) {
     maxDegree = Math.max(maxDegree, graph.degree(n.id));
-    categories[n.attributes.acategory] = true;
+    categories[n.attributes.type] = true;
   })
 
   // min degree
@@ -273,7 +273,7 @@ sigma.parsers.gexf('data/titan-graph.gexf', {
     filter
       .undo('node-category')
       .nodesBy(function(n) {
-        return !c.length || n.attributes.acategory === c;
+        return !c.length || n.attributes.type === c;
       }, 'node-category')
       .apply();
   }
