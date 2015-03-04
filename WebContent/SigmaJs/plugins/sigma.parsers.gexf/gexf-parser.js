@@ -307,7 +307,7 @@
     	var x = n.getElementsByTagName('attvalue');
     	var tmp;
     	for(var i=0;i<x.length;i++){
-    		if(x[i].getAttribute('for') == 'i_con_title' || x[i].getAttribute('for') == 'i_phrase_name'){
+    		if(x[i].getAttribute('for') == 'i_con_title' || x[i].getAttribute('for') == 'i_phrase_name' || x[i].getAttribute('for') == 'pg_no'){
     			tmp = x[i].getAttribute('value');
     		}
     	}
